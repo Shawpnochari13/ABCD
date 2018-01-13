@@ -5,19 +5,20 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 
 public class Abcd extends AppCompatActivity implements View.OnClickListener {
 
     TextView tvA, tvB, tvC, tvD, tvE, tvF, tvG, tvH, tvI, tvJ, tvK, tvL, tvM, tvN, tvO, tvP, tvQ, tvR, tvS, tvT, tvU, tvV, tvW, tvX, tvY, tvZ;
 
+    private int voiceEN[] = {R.raw.a, R.raw.b, R.raw.c, R.raw.d, R.raw.e,
+            R.raw.f, R.raw.g, R.raw.h, R.raw.i, R.raw.j, R.raw.k,
+            R.raw.l, R.raw.m, R.raw.n, R.raw.o, R.raw.p, R.raw.q, R.raw.r,
+            R.raw.s, R.raw.t, R.raw.u, R.raw.v, R.raw.w, R.raw.x, R.raw.y, R.raw.z};
 
-    MediaPlayer a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,vi,w,x,y,z;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,6 @@ public class Abcd extends AppCompatActivity implements View.OnClickListener {
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
-
-
 
 
         tvA = (TextView) findViewById(R.id.tvA);
@@ -115,142 +114,341 @@ public class Abcd extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.tvA:
 
-                a = MediaPlayer.create(Abcd.this,R.raw.a);
-                a.start();
+        switch (v.getId()) {
+
+            case R.id.tvA:
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(this, voiceEN[0]);
+                mp.setLooping(false);
+                mp.start();
+
                 break;
+
             case R.id.tvB:
-                b = MediaPlayer.create(Abcd.this,R.raw.b);
-                b.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[1]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvC:
-                c = MediaPlayer.create(Abcd.this,R.raw.c);
-                c.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[2]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvD:
-                d = MediaPlayer.create(Abcd.this,R.raw.d);
-                d.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[3]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvE:
-                e = MediaPlayer.create(Abcd.this,R.raw.e);
-                e.start();
-
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[4]);
+                mp.setLooping(false);
+                mp.start();
                 break;
             case R.id.tvF:
-                f = MediaPlayer.create(Abcd.this,R.raw.f);
-                f.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[5]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvG:
-                g = MediaPlayer.create(Abcd.this,R.raw.g);
-                g.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[6]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvH:
-                h = MediaPlayer.create(Abcd.this,R.raw.h);
-                h.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[7]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvI:
-                i = MediaPlayer.create(Abcd.this,R.raw.i);
-                i.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[8]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvJ:
-                j = MediaPlayer.create(Abcd.this,R.raw.j);
-                j.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[9]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvK:
-                k = MediaPlayer.create(Abcd.this,R.raw.k);
-                k.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[10]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvL:
-                l = MediaPlayer.create(Abcd.this,R.raw.l);
-                l.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[11]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvM:
-                m = MediaPlayer.create(Abcd.this,R.raw.m);
-                m.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[12]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvN:
-                n = MediaPlayer.create(Abcd.this,R.raw.n);
-                n.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[13]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvO:
-                o = MediaPlayer.create(Abcd.this,R.raw.o);
-                o.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[14]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
 
             case R.id.tvP:
-                p = MediaPlayer.create(Abcd.this,R.raw.p);
-                p.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[15]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvQ:
-                q = MediaPlayer.create(Abcd.this,R.raw.q);
-                q.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[16]);
+                mp.setLooping(false);
+                mp.start();
 
                 break;
             case R.id.tvR:
-                r = MediaPlayer.create(Abcd.this,R.raw.r);
-                r.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[17]);
+                mp.setLooping(false);
+                mp.start();
                 break;
 
             case R.id.tvS:
-                s = MediaPlayer.create(Abcd.this,R.raw.s);
-                s.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[18]);
+                mp.setLooping(false);
+                mp.start();
                 break;
             case R.id.tvT:
-                t = MediaPlayer.create(Abcd.this,R.raw.t);
-                t.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[19]);
+                mp.setLooping(false);
+                mp.start();
                 break;
             case R.id.tvU:
-                u = MediaPlayer.create(Abcd.this,R.raw.u);
-                u.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[20]);
+                mp.setLooping(false);
+                mp.start();
                 break;
 
             case R.id.tvV:
-                vi = MediaPlayer.create(Abcd.this,R.raw.v);
-                vi.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[21]);
+                mp.setLooping(false);
+                mp.start();
                 break;
 
             case R.id.tvW:
-                w = MediaPlayer.create(Abcd.this,R.raw.w);
-                w.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[22]);
+                mp.setLooping(false);
+                mp.start();
                 break;
             case R.id.tvX:
-                x = MediaPlayer.create(Abcd.this,R.raw.x);
-                x.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[23]);
+                mp.setLooping(false);
+                mp.start();
                 break;
 
             case R.id.tvY:
-                y = MediaPlayer.create(Abcd.this,R.raw.y);
-                y.start();
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[24]);
+                mp.setLooping(false);
+                mp.start();
                 break;
             case R.id.tvZ:
-                z = MediaPlayer.create(Abcd.this,R.raw.z);
-                z.start();
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                    }
+                }catch (Exception e){}
+                mp = MediaPlayer.create(Abcd.this, voiceEN[25]);
+                mp.setLooping(false);
+                mp.start();
                 break;
+            }
 
-        }
+
+
     }
-
-
 }
 
 
